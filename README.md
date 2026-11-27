@@ -30,6 +30,17 @@ Open questions:
 - **open**: families of functions with Hankel rank `r` whose value-query discovery cost is polynomial
   in `r`. Structural conditions on the family would be needed, since rank alone is not enough.
 
+## Past–future rank
+
+| Module | Statement | Status |
+|--------|-----------|--------|
+| `PastFutureRank` | for `s_{t+1} = F_t s_t + g_t b_t` in `K^r` with linear readouts and a fixed schedule after the cut, the past–future block factors through the state at the cut, for arbitrary pasts, so its rank is at most `r` | [L-known] |
+| | readers sharing one `r`-dimensional memory: stacked rank at most `r`; separate memories: at most `|L| r` | [L-known] |
+| | claim "the past–future rank bounds the dimension of every realization" (`σ ↦ σ²` after the cut gives rank `2` with one coordinate) | **refuted** |
+| | the `N × N` equality block has rank `N`, while storing the past needs `⌈log₂ N⌉` bits: rank is not a bit count | [L-known] |
+
+Conditions, proof and limitations: [docs/past-future-rank.md](docs/past-future-rank.md).
+
 ## Reproduce
 
 ```bash
