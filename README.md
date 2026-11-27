@@ -10,19 +10,18 @@ case to tell `f_w` apart from the zero function. A small minimal dimension there
 the cost of finding the realization.
 
 Every theorem is checked by the Lean kernel, with no `sorry`, and uses only the axioms `propext`,
-`Classical.choice` and `Quot.sound`. Labels: **[L]** proved in Lean; **open** means stated but not
-resolved here.
+`Classical.choice` and `Quot.sound`. Labels: **[L]** new theorem or construction proved in Lean; **[L-known]** Lean formalization of a known result; **refuted** counterexample proved in Lean; **open** precise statement not resolved here.
 
 ## Contents
 
 | Module | Statement | Status |
 |--------|-----------|--------|
-| `HankelRank` | `u ++ v = w` iff `u = take i w` and `v = drop i w` for a unique cut `i ≤ L` | [L] |
-| | `H = P·Q` through `L + 1` states: prefix chain `P u i = [u = take i w]`, suffix antidiagonal `Q i v = [v = drop i w]` | [L] |
-| | `rank H ≤ L + 1` on every finite window of words | [L] |
-| | `rank H = L + 1` on windows containing all prefixes (rows) and all suffixes (columns) | [L] |
-| `QueryLowerBound` | for every adaptive deterministic strategy and `T < 2^L` rounds, some `w` of length `L` gives the same transcript as the zero function | [L] |
-| | a strategy that separates `0` from every `f_w` with `|w| = L` makes at least `2^L` queries | [L] |
+| `HankelRank` | `u ++ v = w` iff `u = take i w` and `v = drop i w` for a unique cut `i ≤ L` | [L-known] |
+| | `H = P·Q` through `L + 1` states: prefix chain `P u i = [u = take i w]`, suffix antidiagonal `Q i v = [v = drop i w]` | [L-known] |
+| | `rank H ≤ L + 1` on every finite window of words | [L-known] |
+| | `rank H = L + 1` on windows containing all prefixes (rows) and all suffixes (columns) | [L-known] |
+| `QueryLowerBound` | for every adaptive deterministic strategy and `T < 2^L` rounds, some `w` of length `L` gives the same transcript as the zero function | [L-known] |
+| | a strategy that separates `0` from every `f_w` with `|w| = L` makes at least `2^L` queries | [L-known] |
 
 Open questions:
 
