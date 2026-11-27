@@ -1,3 +1,4 @@
 import HiddenWord.HankelRank
 import HiddenWord.QueryLowerBound
 import HiddenWord.PastFutureRank
+import HiddenWord.ObservableClosure
